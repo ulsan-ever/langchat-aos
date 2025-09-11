@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "LangChat"
 include(":app")
+include(":core:designsystem")
