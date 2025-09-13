@@ -4,9 +4,10 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.sizeIn
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -30,6 +31,9 @@ fun LangChatButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
+    colors: ButtonColors = ButtonDefaults.buttonColors(
+        containerColor = MaterialTheme.colorScheme.onBackground,
+    ),
     contentPadding: PaddingValues = ButtonDefaults.ContentPadding,
     content: @Composable RowScope.() -> Unit,
 ) {
@@ -37,9 +41,8 @@ fun LangChatButton(
         onClick = onClick,
         modifier = modifier,
         enabled = enabled,
-        colors = ButtonDefaults.buttonColors(
-            containerColor = MaterialTheme.colorScheme.onBackground,
-        ),
+        shape = RoundedCornerShape(8.dp),
+        colors = colors,
         contentPadding = contentPadding,
         content = content,
     )
@@ -59,6 +62,9 @@ fun LangChatButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
+    colors: ButtonColors = ButtonDefaults.buttonColors(
+        containerColor = MaterialTheme.colorScheme.onBackground,
+    ),
     text: String,
     leadingIcon: @Composable (() -> Unit)? = null,
 ) {
@@ -66,11 +72,13 @@ fun LangChatButton(
         onClick = onClick,
         modifier = modifier,
         enabled = enabled,
-        contentPadding = if (leadingIcon != null) {
-            ButtonDefaults.ButtonWithIconContentPadding
-        } else {
-            ButtonDefaults.ContentPadding
-        }
+        colors = colors,
+        contentPadding = PaddingValues(
+            start = 16.dp,
+            top = 16.dp,
+            end = 16.dp,
+            bottom = 16.dp
+        )
     ) {
         if (leadingIcon != null) {
             Box(Modifier.sizeIn(maxHeight = ButtonDefaults.IconSize)) {
@@ -89,8 +97,6 @@ fun LangChatButton(
 @Composable
 fun LangChatButtonPreview() {
     LangChatTheme {
-        LangChatBackground(modifier = Modifier.size(150.dp, 50.dp)) {
-            LangChatButton(onClick = {}, text = "테스트 버튼")
-        }
+        LangChatButton(onClick = {}, text = "테스트 버튼")
     }
 }
