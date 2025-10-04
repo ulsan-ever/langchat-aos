@@ -21,7 +21,9 @@ import com.ulsanever.core.designsystem.theme.ThemePreviews
 import com.ulsanever.core.designsystem.R as designR
 
 @Composable
-fun LoginScreen() {
+fun LoginScreen(
+    onLoginClick: () -> Unit,
+) {
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
@@ -52,6 +54,6 @@ fun LoginScreen() {
 @Composable
 fun LoginScreenPreview() {
     LangChatTheme {
-        LoginScreen()
+        LoginScreen(onLoginClick = {})
     }
 }

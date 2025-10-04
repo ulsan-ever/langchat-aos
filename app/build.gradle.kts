@@ -46,7 +46,10 @@ kotlin {
 }
 
 dependencies {
+    // Modules
     implementation(projects.core.designsystem)
+    implementation(projects.feature.auth)
+    implementation(projects.feature.friends)
 
     // Default Library
     implementation(libs.androidx.core.ktx)
