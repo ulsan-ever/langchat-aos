@@ -1,4 +1,4 @@
-package com.ulsanever.feature.auth
+package com.ulsanever.feature.auth.login
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -18,6 +18,7 @@ import com.ulsanever.core.designsystem.component.LangChatButton
 import com.ulsanever.core.designsystem.theme.KakaoYellow
 import com.ulsanever.core.designsystem.theme.LangChatTheme
 import com.ulsanever.core.designsystem.theme.ThemePreviews
+import com.ulsanever.feature.auth.R
 import com.ulsanever.core.designsystem.R as designR
 
 @Composable
