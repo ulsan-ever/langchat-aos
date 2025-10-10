@@ -95,7 +95,7 @@ fun LangChatButton(
 
 @ThemePreviews
 @Composable
-fun LangChatButtonPreview() {
+private fun LangChatButtonPreview() {
     LangChatTheme {
         LangChatButton(onClick = {}, text = "테스트 버튼")
     }

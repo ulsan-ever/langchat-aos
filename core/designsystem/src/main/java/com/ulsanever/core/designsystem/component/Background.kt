@@ -38,7 +38,7 @@ fun LangChatBackground(
 
 @ThemePreviews
 @Composable
-fun LangChatBackgroundPreview() {
+private fun LangChatBackgroundPreview() {
     LangChatTheme(dynamicTheme = false) {
         LangChatBackground(modifier = Modifier.size(100.dp), content = {})
     }

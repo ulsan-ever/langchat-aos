@@ -53,7 +53,7 @@ fun LoginScreen(
 
 @ThemePreviews
 @Composable
-fun LoginScreenPreview() {
+private fun LoginScreenPreview() {
     LangChatTheme {
         LoginScreen(onLoginClick = {})
     }
