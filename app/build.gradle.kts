@@ -81,4 +81,7 @@ dependencies {
 
     // Timber
     implementation(libs.timber)
+
+    // Kakao SDK
+    implementation(libs.kakao.sdk.v2.user)
 }
