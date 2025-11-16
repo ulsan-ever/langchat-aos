@@ -34,6 +34,7 @@ kotlin {
 dependencies {
     // Modules
     implementation(projects.core.designsystem)
+    implementation(projects.core.data)
 
     // Default Library
     implementation(libs.androidx.core.ktx)

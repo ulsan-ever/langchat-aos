@@ -54,10 +54,14 @@ internal fun LoginScreen(
         // Kakao button
         LangChatButton(
             onClick = {
+                /**
+                 * 소셜 로그인 기능 구현 시 context 객체가 필요하기 때문에,
+                 * UI 계층에서 해당 기능 구현
+                 */
                 coroutineScope.launch {
                     try {
                         val kakaoAccessToken = KakaoLoginProvider.login(context)
-                        // TODO: ViewModel로 토큰 전달
+                        viewModel.login(kakaoAccessToken)
                     } catch (e: Exception) {
                         // TODO: ViewModel로 오류 전달 후 상태 수집하기
                         if (e is ClientError && e.reason == ClientErrorCause.Cancelled) {
