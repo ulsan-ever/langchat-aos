@@ -1,5 +1,6 @@
 package com.ulsanever.core.network.di
 
+import com.ulsanever.core.network.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
